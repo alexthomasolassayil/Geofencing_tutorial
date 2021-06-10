@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             }
     }
     private func getRegionForMonitoring() -> CLCircularRegion {
-        let someCoordinate = CLLocationCoordinate2DMake(37.33233141, -122.0312186)
+        let someCoordinate = CLLocationCoordinate2DMake(37.332331, -121.031219)
         
         let region = CLCircularRegion(center: someCoordinate,
                                       radius: min(200, locationManager.maximumRegionMonitoringDistance),
