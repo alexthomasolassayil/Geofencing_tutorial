@@ -104,6 +104,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         handleGeofenceEvent(with: region, event: .didEnter)
@@ -111,8 +112,7 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         handleGeofenceEvent(with: region, event: .didExit)
     }
-    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?,
-                         withError error: Error) {
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         print("Monitoring failed for region with identifier: \(region!.identifier)")
     }
     
